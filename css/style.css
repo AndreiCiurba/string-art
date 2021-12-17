@@ -1,0 +1,32 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(#bbbb99, #7788aa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  margin: auto;
+  font-size: 2em;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+#btn{
+    background-color: #9a68ab;
+    margin: auto;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-top: 15px;
+}

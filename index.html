@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js example</title>
+  <script src="libraries/p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <script src="sketch.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/algorithms.js"></script>
+  <script src="/js/shufflePoints.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>Asta-i nebunia lui Juvel, Raducule!</h1>
+    <div class="center">
+      <div class="inputs">
+        <input type="text" id="width" value="800">
+        <input type="text" id="height" value="800">
+        <input type="text" id="nails" value="48">
+        <input type="text" id="radius" value="300">
+        <div class="colorPickers">
+          <input type="color" id = "inputColor1" value="#e4e641">
+          <input type="color" id = "inputColor2" value="#111111">
+        </div>
+
+        <button id = "btn" type="button" name="button" onclick = refreshValues()>Refresh</button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
