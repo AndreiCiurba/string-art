@@ -52,6 +52,7 @@ function recalculateCenters(){
 
 
 
+
 function setup() {
 
   createCanvas(width, height);
@@ -69,7 +70,6 @@ function draw() {
   displayNails(pointArrayX,pointArrayY);
 
   //display Lines
-  console.log(color)
   stroke(stringColor);
   strokeWeight(0.06);
   algorithmNx(pointArrayX,pointArrayY, items,2);

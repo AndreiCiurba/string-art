@@ -5,7 +5,7 @@ function algorithm2x(arrayX,arrayY,items){
   startAdvance = 0;
   buffer = 0;
   numberOfAdvancedPositions = 1;
-  for(var i = 0; i < 2400; i++){
+  for(var i = 0; i < 5000; i++){
     if (startAdvance == items){
         startAdvance = 0;
         startPos = (startPos + numberOfAdvancedPositions);
@@ -42,7 +42,7 @@ function algorithm3x(arrayX,arrayY,items){
   startAdvance = 0;
   buffer = 0;
   numberOfAdvancedPositions = 1;
-  for(var i = 0; i < 2400; i++){
+  for(var i = 0; i < 5000; i++){
     if (startAdvance == items){
         startAdvance = 0;
         startPos = (startPos + numberOfAdvancedPositions);
