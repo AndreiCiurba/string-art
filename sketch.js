@@ -8,8 +8,8 @@ let buffer = 1;
 
 let width = 800;
 let height = 800;
-let items = 49;
-let r = 300;
+let items = 48;
+let r = 300   ;
 let rmare = 2*r;
 
 
@@ -50,15 +50,22 @@ function recalculateCenters(){
 }
 
 
-
+//TODO add timeout function
 
 function setup() {
-
   createCanvas(width, height);
+
+  //// TODO: add eliptical faature by multiplying the array refreshValues
+  //with a lambda, either vertical, either horizontal
+
+
   // getCircle(x0,y0,r,items);
   // findElipticalCircle();
   randomizePoints(x0,y0,r,items);
-  // console.log(pointArrayX,pointArrayY);
+  // pointArrayX = [];
+  // pointArrayY = [];
+  // pointArrayX = intersectX;
+  // pointArrayY = intersectY;
 }
 
 
@@ -66,18 +73,24 @@ function draw() {
   //display Nails
   background("#d9d382");
   strokeWeight(7);
+
   displayNails(pointArrayX,pointArrayY);
+
 
   //display Lines
 
-  strokeWeight(0.1);
+  strokeWeight(0.2);
   //
-  // stroke("#003d99");
-  // algorithm2x(pointArrayX,pointArrayY, items, -1);
-  stroke("black");
-  algorithm2x(pointArrayX,pointArrayY, items, 0);
-  // stroke("#003d99");
-  // algorithm2x(pointArrayX,pointArrayY, items, 1);
+  // stroke("blue");
+  // algorithm2x(pointArrayX,pointArrayY, items, -1, 5);
+  // stroke("red");
+  // algorithm2x(pointArrayX,pointArrayY, items, 0);
+
+
+
+
+  stroke("#003d99");
+  algorithm2x(pointArrayX,pointArrayY, items, 1);
 
   //
   // stroke("black");

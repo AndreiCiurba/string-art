@@ -1,10 +1,10 @@
-function algorithm2x(arrayX,arrayY,items, startPosition =0 ){
+function algorithm2x(arrayX,arrayY,items, startPosition = 0, advPos = 1){
   p1=0;
   p2=0;
   startPos=startPosition;
   startAdvance = 0;
   buffer = 0;
-  numberOfAdvancedPositions =3;
+  numberOfAdvancedPositions =advPos;
   for(var i = 0; i < 1024; i++){
     if (startAdvance == items){
         startAdvance = 0;
