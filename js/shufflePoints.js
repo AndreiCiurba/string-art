@@ -1,5 +1,11 @@
 function randomizePoints(x0,y0,r, items){
-  errorLevel = 1000;
+  //no random
+  errorLevel = items;
+
+  //random
+  // errorLevel = 1000;
+
+
   getCircle(x0,y0,r,errorLevel);
   arrayX = pointArrayX;
   arrayY = pointArrayY;

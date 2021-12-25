@@ -81,7 +81,11 @@ function calculateMidValues(){
      dist = [y0Mare + val,y0Mare - val]
      console.log(dist)
      return dist
-
-
-
 }
+
+
+// function keyTyped() {
+//   if (key === 's') {
+//     saveCanvas('myCanvas', 'jpg');
+//   }
+// }
