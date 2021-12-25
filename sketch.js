@@ -8,8 +8,7 @@ let buffer = 1;
 
 let width = 800;
 let height = 800;
-let items = 48;
-
+let items = 49;
 let r = 300;
 let rmare = 2*r;
 
@@ -20,8 +19,8 @@ let y0 = height/2;
 let x0Mare = width/2 + r;
 let y0Mare = height/2;
 
-let stringColor = "#e4e641";
-let backgroundColor = "#111111";
+let stringColor = "#0076d1";
+let backgroundColor = "#faefbe";
 
 function refreshValues() {
   width = +document.getElementById("width").value;
@@ -52,27 +51,50 @@ function recalculateCenters(){
 
 
 
+
 function setup() {
 
   createCanvas(width, height);
   // getCircle(x0,y0,r,items);
   // findElipticalCircle();
-  randomizePoints(x0,y0,r, items);
+  randomizePoints(x0,y0,r,items);
   // console.log(pointArrayX,pointArrayY);
 }
 
 
 function draw() {
   //display Nails
-  background(backgroundColor);
+  background("#d9d382");
   strokeWeight(7);
   displayNails(pointArrayX,pointArrayY);
 
   //display Lines
-  console.log(color)
-  stroke(stringColor);
-  strokeWeight(0.06);
-  algorithmNx(pointArrayX,pointArrayY, items,2);
+
+  strokeWeight(0.1);
+  //
+  // stroke("#003d99");
+  // algorithm2x(pointArrayX,pointArrayY, items, -1);
+  stroke("black");
+  algorithm2x(pointArrayX,pointArrayY, items, 0);
+  // stroke("#003d99");
+  // algorithm2x(pointArrayX,pointArrayY, items, 1);
+
+  //
+  // stroke("black");
+  // algorithm2x(pointArrayX,pointArrayY, items, 20);
+  // stroke("#003d99");
+  // algorithm2x(pointArrayX,pointArrayY, items, 21);
+
+  // stroke("black");
+  // algorithm2x(pointArrayX,pointArrayY, items, 40);
+  // stroke("#003d99");
+  // algorithm2x(pointArrayX,pointArrayY, items, 41);
+
+
+  // stroke("black");
+  // algorithm3x(pointArrayX,pointArrayY, items);
+  // stroke("red");
+  // algorithmNx(pointArrayX,pointArrayY, items,4);
 
 
 }
