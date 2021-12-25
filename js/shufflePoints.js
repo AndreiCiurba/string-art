@@ -1,7 +1,6 @@
-function randomizePoints(x0,y0,r, items){
+function randomizePoints(x0,y0,r,items){
   //no random
   errorLevel = items;
-
   //random
   // errorLevel = 1000;
 
