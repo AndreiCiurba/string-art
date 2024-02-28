@@ -1,11 +1,11 @@
-function algorithm2x(arrayX,arrayY,items, startPosition = 0, advPos = 1){
+function algorithm2x(arrayX,arrayY,items, startPosition = 0, advPos = 1, totalLines = 1024){
   p1=0;
   p2=0;
   startPos=startPosition;
   startAdvance = 0;
   buffer = 0;
   numberOfAdvancedPositions =advPos;
-  for(var i = 0; i < 1024; i++){
+  for(var i = 0; i < totalLines; i++){
     if (startAdvance == items){
         startAdvance = 0;
         startPos = (startPos + numberOfAdvancedPositions);
@@ -70,14 +70,14 @@ function algorithm3x(arrayX,arrayY,items){
     startAdvance = startAdvance + 1;
   }
 }
-function algorithmNx(arrayX,arrayY,items,n){
+function algorithmNx(arrayX,arrayY,items,n, totalLines = 1024){
   p1=0;
   p2=0;
   startPos=0;
   startAdvance = 0;
   buffer = 0;
   numberOfAdvancedPositions = 1;
-  for(var i = 0; i < 512; i++){
+  for(var i = 0; i < totalLines; i++){
     if (startAdvance == items){
         startAdvance = 0;
         startPos = (startPos + numberOfAdvancedPositions);

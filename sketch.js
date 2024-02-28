@@ -8,8 +8,8 @@ let buffer = 1;
 
 let width = 800;
 let height = 800;
-let items = 48;
-let r = 300   ;
+let items = 64;
+let r = 100   ;
 let rmare = 2*r;
 
 
@@ -20,7 +20,7 @@ let x0Mare = width/2 + r;
 let y0Mare = height/2;
 
 let stringColor = "#0076d1";
-let backgroundColor = "#faefbe";
+let backgroundColor = "#efdcba";
 
 function refreshValues() {
   width = +document.getElementById("width").value;
@@ -59,19 +59,19 @@ function setup() {
   //with a lambda, either vertical, either horizontal
 
 
-  // getCircle(x0,y0,r,items);
-  // findElipticalCircle();
-  randomizePoints(x0,y0,r,items);
-  // pointArrayX = [];
-  // pointArrayY = [];
-  // pointArrayX = intersectX;
-  // pointArrayY = intersectY;
+  getCircle(x0,y0,r,items);
+  findElipticalCircle();
+  // randomizePoints(x0,y0,r,items);
+  pointArrayX = [];
+  pointArrayY = [];
+  pointArrayX = intersectX;
+  pointArrayY = intersectY;
 }
 
 
 function draw() {
   //display Nails
-  background("#d9d382");
+  background("#ddeedd");
   strokeWeight(7);
 
   displayNails(pointArrayX,pointArrayY);
@@ -79,7 +79,7 @@ function draw() {
 
   //display Lines
 
-  strokeWeight(0.2);
+  strokeWeight(0.1);
   //
   // stroke("blue");
   // algorithm2x(pointArrayX,pointArrayY, items, -1, 5);
@@ -90,7 +90,7 @@ function draw() {
 
 
   stroke("#003d99");
-  algorithm2x(pointArrayX,pointArrayY, items, 1);
+  // algorithm2x(pointArrayX,pointArrayY, items, 1, 1, 5000);
 
   //
   // stroke("black");
@@ -106,8 +106,9 @@ function draw() {
 
   // stroke("black");
   // algorithm3x(pointArrayX,pointArrayY, items);
-  // stroke("red");
-  // algorithmNx(pointArrayX,pointArrayY, items,4);
+  stroke("#122334");
+  strokeWeight(0.1)
+  algorithmNx(pointArrayX,pointArrayY, items,500, 2048);
 
 
 }
