@@ -5,6 +5,9 @@ function getCircle(x0,y0,r,nrPoints)
       var y = y0 + r * sin(2 * PI * i / nrPoints);
       append(pointArrayX,x);
       append(pointArrayY,y);
+
+      append(intersectX,x);
+      append(intersectY,y);
     }
 }
 function getM(x1,y1,x2,y2){

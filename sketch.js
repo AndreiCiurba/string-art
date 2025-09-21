@@ -60,7 +60,7 @@ function setup() {
 
 
   getCircle(x0,y0,r,items);
-  findElipticalCircle();
+  // findElipticalCircle();
   // randomizePoints(x0,y0,r,items);
   pointArrayX = [];
   pointArrayY = [];
@@ -74,7 +74,7 @@ function draw() {
   background("#ddeedd");
   strokeWeight(7);
 
-  displayNails(pointArrayX,pointArrayY);
+  // displayNails(pointArrayX,pointArrayY); 
 
 
   //display Lines
@@ -90,7 +90,7 @@ function draw() {
 
 
   stroke("#003d99");
-  // algorithm2x(pointArrayX,pointArrayY, items, 1, 1, 5000);
+  algorithm2x(pointArrayX,pointArrayY, items, 1, 1, 2000);
 
   //
   // stroke("black");
@@ -108,7 +108,7 @@ function draw() {
   // algorithm3x(pointArrayX,pointArrayY, items);
   stroke("#122334");
   strokeWeight(0.1)
-  algorithmNx(pointArrayX,pointArrayY, items,500, 2048);
+  // algorithmNx(pointArrayX,pointArrayY, items,500, 2048);
 
 
 }
