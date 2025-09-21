@@ -1,4 +1,4 @@
-function algorithm2x(arrayX,arrayY,items, startPosition = 0, advPos = 1, totalLines = 1024){
+function algorithm2x(arrayX,arrayY,items, startPosition = 0, advPos = 1, totalLines){
   p1=0;
   p2=0;
   startPos=startPosition;

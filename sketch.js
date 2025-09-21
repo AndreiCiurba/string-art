@@ -11,6 +11,7 @@ let height = 800;
 let items = 64;
 let r = 100   ;
 let rmare = 2*r;
+let totalLines = 1024;
 
 
 
@@ -29,6 +30,7 @@ function refreshValues() {
   radius = +document.getElementById("radius").value;
   stringColor = String(document.getElementById("inputColor1").value);
   backgroundColor = String(document.getElementById("inputColor2").value);
+  totalLines = +document.getElementById("linesTotal").value;
   console.log(color);
   recalculateCenters();
   setup();
@@ -90,7 +92,7 @@ function draw() {
 
 
   stroke("#003d99");
-  algorithm2x(pointArrayX,pointArrayY, items, 1, 1, 2000);
+  algorithm2x(pointArrayX,pointArrayY, items, 1, 1, totalLines);
 
   //
   // stroke("black");
