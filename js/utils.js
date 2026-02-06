@@ -10,6 +10,52 @@ function getCircle(x0,y0,r,nrPoints)
       append(intersectY,y);
     }
 }
+
+
+function getTriangle(x0, y0, r, nrPoints)
+{
+  var vertsX = [];
+  var vertsY = [];
+
+  // --- compute the 3 triangle vertices ---
+  for (var i = 0; i < 3; i++) {
+      var angle = 2 * PI * i / 3 - PI/2; // point up
+      vertsX[i] = x0 + r * cos(angle);
+      vertsY[i] = y0 + r * sin(angle);
+  }
+
+  var ptsPerEdge = nrPoints / 3;
+
+  // --- distribute points along edges ---
+  for (var e = 0; e < 3; e++) {
+
+      var x1 = vertsX[e];
+      var y1 = vertsY[e];
+
+      var x2 = vertsX[(e+1) % 3];
+      var y2 = vertsY[(e+1) % 3];
+
+      for (var j = 0; j < ptsPerEdge; j++) {
+
+          var t = j / ptsPerEdge;  // 0 → 1 along edge
+
+          var x = x1 + (x2 - x1) * t;
+          var y = y1 + (y2 - y1) * t;
+
+          append(pointArrayXtriangle, x);
+          append(pointArrayYtriangle, y);
+
+          append(intersectXtriangle, x);
+          append(intersectYtriangle, y);
+      }
+  }
+}
+
+
+
+
+
+
 function getM(x1,y1,x2,y2){
   if (x2 != x1){
     return (y2 - y1)/(x2 - x1)
